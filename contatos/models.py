@@ -18,7 +18,8 @@ class Contato (models.Model):
     data_criacao = models.DateTimeField(default=timezone.now)
     descricao = models.TextField(blank=True)
     categoria = models.ForeignKey(Categoria, on_delete= DO_NOTHING)
-
+    foto = models.ImageField(blank=True, upload_to='fotos/%Y/%m/')
+    
     def __str__(self):
         return self.nome
 
