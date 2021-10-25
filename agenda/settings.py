@@ -13,7 +13,7 @@ import os
 from pathlib import Path
 from django.contrib.messages import constants
 import dj_database_url
-from environs import Env
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,10 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-env = Env()
-env.read_env(BASE_DIR/".env",recurse=false)
-SECRET_KEY = env.str(SECRET_KEY)
-
+SECRET_KEY = 'django-insecure-j0jlwe6xc+!9*g7u8@sfb8y=3n&gi*h+-s%3xa0wfdr6w07n+-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
